@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+}
+/*---------------------------HEADER----------------------------------*/
+header{
+    border-style: double black;
+    border-width: 5px;
+    background-color: #ccccc1;
+    height: 500px;
+}
+.header-title-hero>h1{
+    text-align: center;
+    font-size: 100px;
+    padding-top: 100px;
+    font-weight: 900;   
+}
+/*---------------------------NAVBAR----------------------------------*/
+/*---------------------------MAIN------------------------------------*/
+/*---------------------------FOOTER----------------------------------*/
+/*---------------------------MEDIA QUERIES---------------------------*/
+@media screen and (max-height: 768px) {
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: Montserrat, sans-serif;
+    }
+    .header-title-hero>h1{
+        text-align: center;
+        font-size: 50px;
+        padding-top: 50px;
+        font-weight: 500;   
+    }
+}
