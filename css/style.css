@@ -126,20 +126,44 @@ main section.description-main-4>p {
     padding-right: 100px;
 }
 /*---------------------------FORM------------------------------------*/
-main article{
+#form-container-different-main{
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    align-items: space-between;
-    height: 500px;
-    width: 600px;
-    margin: auto;
-    padding: 10px;
-    border-radius: 10px;
-    background-image: repeating-linear-gradient(to bottom, #fffff1, #b2b2a8 33%, #65655f);
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 800px;
+    width: auto;
+    max-width: 100%;
+    background-color: #ccccc1;
+    margin: 0;
+    padding: 0;
 }
-main article>form{
-    padding: 100px;
+main div.box-form-img{
+    display: flex;
+    flex-direction: row-reverse;
+    flex: auto;
+    margin-bottom: 100px;
+    width: 70%;
+    max-width: 800px;
+    background-color: #4c4c47;
+    color: white;
+    border-radius: 10px;
+
+}
+div.img-between-form{
+    height: auto;
+    max-height: 800px;
+    width: 60%;
+    max-width: 800px;
+    background-image: url(../img/portada.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 0px 0px 10px;
+}
+main div.grid-btn-form{
+    display: grid;
+    gap: 20px;
+    padding: 20px;
 }
 /*---------------------------FOOTER----------------------------------*/
 footer {
@@ -191,12 +215,19 @@ footer hr.solid {
     }
 }
 
-@media screen and (max-height: 320px) {
+@media screen and (max-width: 500px) {
     .header-title-hero>h1 {
         text-align: center;
         font-size: 50px;
         padding-top: 50px;
         font-weight: 300;
+    }
+    div.img-between-form{
+        height: auto;
+        max-height: 800px;
+        width: 60%;
+        max-width: 800px;
+        visibility: hidden;
     }
 }
 
