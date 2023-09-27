@@ -125,6 +125,24 @@ main section.description-main-4>p {
     padding-left: 100px;
     padding-right: 100px;
 }
+
+#about-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 1300px;
+    width: auto;
+    max-width: 100%;
+    background-color: #ccccc1;
+    margin: 0;
+    padding: 0;
+}
+
+section.intro-about{
+    transition: unset;
+    transform: unset;
+}
 /*---------------------------FORM------------------------------------*/
 #form-container-different-main{
     display: flex;
