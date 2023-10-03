@@ -21,3 +21,13 @@ EN PROCESO:
 1) Se comenzará a crear variables placeholders en SASS por si son necesarias
 2) Queda pendiente traspasar las media queries al lenguaje SASS
 3) Hay que investigar si es necesario crear bucles, mapas u otro tipo de variables para la siguiente entrega
+
+ACTUALIZACIONES 3.1.1
+
+HECHO:
+1) Se crearon variables de SASS para integrar en el SCSS | CSS estilos.css
+2) Se establece una corrección a los nth-child debido a una mala escritura en SCSS.
+3) Se corrigen bugs del formato de HTML y se definen ciertos parámetros del @screen media and {}
+
+EN PROCESO: 
+1) Queda pendiente el trabajar sobre la priorización de efectos de algunos bugs que hay por cruce de clases e ID. Se buscará establecer una métrica de CSS en modo in-line, algo poco ortodoxo pero funcional para sacar el código. 
