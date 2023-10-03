@@ -1,5 +1,55 @@
 //Variables y otras cosas
 
+$vistamobile: (max-width: 768px);
+$vistatablet: (max-width: 1024px);
+$vistadesktop: (min-width: 1025px);
+$h1: 500px;
+$h1Desktop: 2rem;
+$h1Mobile: 1.3rem;
+
+//Variable de vista
+
+@if $vistadesktop == 1025px {
+    $h1: $h1Desktop;
+    } @else {
+        $h1: $h1Mobile;
+}
+@if $vistamobile == 768px {
+        $h1: $h1Mobile;
+        } @else {
+    $h1: $h1Desktop;
+}
+
+// Varible para crear tabla
+
+$table: 7;
+$rows: 7;
+$columns: 7;
+
+@for $table from 1 through 7 {
+    @for $rows from 1 through 7 {
+        @for $columns from 1 through 7 {
+        .table-#{$table}-#{$rows}-#{$columns} {
+                display: grid;
+                grid-template-columns: repeat(#{$columns}, 1fr);
+                }
+            }
+        }
+}
+
+//Placeholders
+
+//Mixins
+$font--original--size--desktop: 1.5rem;
+$font--original--size--mobile: 0.7rem;
+$font--original--font--type: Montserrat, sans-serif;
+$font--alternative--size--mobile: 0.4rem;
+$font--alternative--size--desktop: 1rem;
+$font--alternative--font--type: Montserrat, sans-serif;
+$color--original--palette--gray: #656560;
+$color--original--palette--white: #ccccc1;
+$color--original--palette--black: #4c4c47;
+$color--original--palette--red: #ff0000;
 
 //Traspaso de información de un archivo a otro
 html{
@@ -37,34 +87,46 @@ main{
     margin: 100px;
     gap: 0;
     section.description-main-1{
-        section:nth-child(1) {
+        &:nth-child(1) {
             transition: transform 0.5s ease-in-out;
             margin: 20px;
         }
-        section:hover:nth-child(1) {
+        &:hover:nth-child(1) {
             transform: scale(1.1);
         }
         div.container-description{
-            grid-area: main-left 1 1;
-            background-image: url(../img/img1.jpg);
-            background-size: cover;
-            color: white;
-            border-radius: 15px;
-            box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.5);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            background-position: center;
-        }
-            h2 + p{
-                padding: 40px;
-            }
+        // ADD OPENING CURLY BRACE HERE
         }
     }
+}
+            section.description-main-1{
+                &:nth-child(1) {
+                    transition: transform 0.5s ease-in-out;
+                    margin: 20px;
+                }
+                &:hover:nth-child(1) {
+                    transform: scale(1.1);
+                }
+                div.container-description{
+                    grid-area: main-left 1 1;
+                    background-image: url(../img/img1.jpg);
+                    background-size: cover;
+                    color: white;
+                    border-radius: 15px;
+                    box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.5);
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                    background-position: center;
+                    h2 + p{
+                        padding: 40px;
+                    }
+                }
+            }
     section.description-main-2{
-        section:nth-child(2) {
+        &:nth-child(2) {
             transition: transform 0.5s ease-in-out;
             margin: 20px;
         }
-        section:hover:nth-child(2) {
+        &:hover:nth-child(2) {
             transform: scale(1.1);
         }
         div.container-description2{
@@ -82,11 +144,11 @@ main{
         }
     }
     section.description-main-3{
-        section:nth-child(3) {
+        &:nth-child(3) {
             transition: transform 0.5s ease-in-out;
             margin: 20px;
         }
-        section:hover:nth-child(3) {
+        &:hover:nth-child(3) {
             transform: scale(1.1);
         }
         div.container-description3{
