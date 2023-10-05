@@ -1,41 +1,23 @@
 //Variables y otras cosas
 
+$vistaminimobile: (max-width: 320px);
 $vistamobile: (max-width: 768px);
 $vistatablet: (max-width: 1024px);
 $vistadesktop: (min-width: 1025px);
 $h1: 500px;
 $h1Desktop: 2rem;
 $h1Mobile: 1.3rem;
+$h1Mobilepocket: 0.9rem;
 
-//Variable de vista
+//Variable de colores
 
-@if $vistadesktop == 1025px {
-    $h1: $h1Desktop;
-    } @else {
-        $h1: $h1Mobile;
-}
-@if $vistamobile == 768px {
-        $h1: $h1Mobile;
-        } @else {
-    $h1: $h1Desktop;
-}
+$color0: #232b34;
+$color1: #242c35;
+$color2: #3d4b5b;
+$color3: #566a81;
+$color4: #6f849b;
+$color5: #8a9bb5;
 
-// Varible para crear tabla
-
-$table: 7;
-$rows: 7;
-$columns: 7;
-
-@for $table from 1 through 7 {
-    @for $rows from 1 through 7 {
-        @for $columns from 1 through 7 {
-        .table-#{$table}-#{$rows}-#{$columns} {
-                display: grid;
-                grid-template-columns: repeat(#{$columns}, 1fr);
-                }
-            }
-        }
-}
 
 //Placeholders
 
