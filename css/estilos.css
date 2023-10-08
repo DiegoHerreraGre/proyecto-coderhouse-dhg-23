@@ -1,26 +1,146 @@
+header div.header-title-hero {
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff;
+  margin: 1.2em; }
+  header div.header-title-hero h1 {
+    font-size: 1.8rem;
+    font-weight: 999;
+    text-align: center;
+    margin: 1em;
+    padding: 1em; }
+
+section.description-main-4 div.card {
+  display: block;
+  position: relative;
+  max-width: 300px;
+  max-height: 320px;
+  background-color: #f2f8f9;
+  border-radius: 10px;
+  padding: 2em 1.2em;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #c3e6ec, #a7d1d9);
+  font-family: Arial, Helvetica, sans-serif; }
+  section.description-main-4 div.card:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: linear-gradient(135deg, #364a60, #384c6c);
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.35s ease-out; }
+    section.description-main-4 div.card:before:hover:before {
+      transform: scale(28); }
+    section.description-main-4 div.card:before:hover p.card-title {
+      transition: all 0.5s ease-out;
+      color: #ffffff; }
+    section.description-main-4 div.card:before:hover p.small-desc {
+      transition: all 0.5s ease-out;
+      color: rgba(255, 255, 255, 0.8); }
+  section.description-main-4 div.card p.card-title {
+    color: #262626;
+    font-size: 1.5em;
+    line-height: normal;
+    font-weight: 700;
+    margin-bottom: 0.5em; }
+  section.description-main-4 div.card p.small-desc {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #452c2c; }
+  section.description-main-4 div.card div.go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, #6293c8, #384c6c);
+    border-radius: 0 4px 0 32px; }
+    section.description-main-4 div.card div.go-corner div.go-arrow {
+      margin-top: -4px;
+      margin-right: -4px;
+      color: white;
+      font-family: courier, sans; }
+
 footer {
-  background-color: #656560;
+  background-color: white;
   height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  box-shadow: 0 0 50px 20px #4c4c47; }
-  footer div.container-footer-img a img {
-    width: 2.8em;
-    height: 2.8em;
-    margin: 0.5em; }
+  align-items: center; }
+  footer div.container-footer-img {
+    border-radius: 22px;
+    background: #ffffff;
+    box-shadow: -29px 29px 57px #d9d9d9, 29px -29px 57px #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2em;
+    padding: 1em; }
+    footer div.container-footer-img a img {
+      width: 2.8em;
+      height: 2.8em;
+      margin: 0.5em;
+      color: black; }
   footer div.btn-contact-stats button {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
     margin: 1em;
-    position: 1em;
-    border-color: #ac99ea; }
+    border-color: #161616; }
     footer div.btn-contact-stats button a {
       text-decoration: none;
-      color: #ac99ea;
+      color: #161616;
       font-size: 1em;
       font-weight: 500;
-      padding: 2em; }
-  footer hr.solid {
-    width: 700px;
+      padding: 0.2em;
+      color: white; }
+  footer div.container-footer-line {
+    min-width: 600px;
+    max-width: 1000px;
     height: 0;
-    border-top: 50% thick black; }
+    margin: auto; }
+    footer div.container-footer-line hr.solid {
+      display: block;
+      color: black;
+      animation: lineAnimation 4s linear infinite;
+      text-align: center; }
+
+@keyframes lineAnimation {
+  0% {
+    width: 0%;
+    margin-left: 50%; }
+  25% {
+    width: 25%;
+    margin-left: 0%; }
+  50% {
+    width: 50%;
+    margin-left: 0%; }
+  75% {
+    width: 25%;
+    margin-left: 0%; }
+  100% {
+    width: 0%;
+    margin-left: 50%; } }
+  footer div.container-footer {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
