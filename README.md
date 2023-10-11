@@ -31,3 +31,17 @@ HECHO:
 
 EN PROCESO: 
 1) Queda pendiente el trabajar sobre la priorización de efectos de algunos bugs que hay por cruce de clases e ID. Se buscará establecer una métrica de CSS en modo in-line, algo poco ortodoxo pero funcional para sacar el código. 
+
+ACTUALIZACIONES 3.5.4
+
+HECHO: 
+1) ¡Nuevo diseño! Se ha preparado una paleta de colores blanca con degradados y sombras en cajas con borde circular. Se busca mayor elegencia y sencillez minimalista para posibles clientes.
+2) Generalización del footer y del header con una estructura limpia. 
+3) Corrección de errores en la anidación SCSS. 
+4) Se crearon nuevas variables de colores en SCSS. 
+5) La rama renovación fue unida al main.
+
+EN PROCESO: 
+1) Se creará para las siguientes versiones una nueva rama llamada "Animations"
+2) HTML 3, 4 y 5 serán los siguientes en quedar listos.
+3) Se aplicará la misma paleta de colores. 
