@@ -19,7 +19,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: "main-left main-center main-right" "main-middle";
+  grid-template-areas: "main-left main-center main-right" "main-middle";
   height: 1400px;
   margin: 100px;
   gap: 0; }
