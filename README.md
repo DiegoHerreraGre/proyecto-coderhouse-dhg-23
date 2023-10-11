@@ -1,4 +1,5 @@
 El proyecto de trabajo versión 2.0 está enfocado en la creación de un landing page y un formulario donde obtener los datos de las personas interesadas. 
+
 ACTUALIZACIONES 2.3.4
 HECHO: 
 1) Trabajo de la página principal con las secciones HERO, MAIN, NAV, FOOTER.
