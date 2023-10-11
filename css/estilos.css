@@ -68,7 +68,7 @@ section.intro-services div.container-intro-services {
     margin: 1em;
     padding: 1em; }
 
-@media screen and (min-width: 768px) {
+@media screen and ((min-width: 768px)) {
   section.intro-services div.container-intro-services {
     margin: 2.3em; }
     section.intro-services div.container-intro-services h2 {
@@ -88,40 +88,16 @@ main#form-container-different-main div.box-form-img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin: 1.2em;
-  padding: 1em; }
+  align-items: center; }
   main#form-container-different-main div.box-form-img form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: 1.2em;
-    padding: 1em; }
+    align-items: center; }
     main#form-container-different-main div.box-form-img form div.grid-btn-form {
       display: grid;
       grid-template-columns: auto;
-      grid-template-rows: auto;
-      gap: 2em;
-      margin: 1.2em;
-      padding: 1em; }
-      main#form-container-different-main div.box-form-img form div.grid-btn-form label {
-        font-size: 1em;
-        font-weight: 500;
-        text-align: center;
-        margin: 1em;
-        padding: 1em; }
-      main#form-container-different-main div.box-form-img form div.grid-btn-form input {
-        margin: 1em;
-        padding: 1em; }
-      main#form-container-different-main div.box-form-img form div.grid-btn-form select {
-        margin: 1em;
-        padding: 1em; }
-      main#form-container-different-main div.box-form-img form div.grid-btn-form textarea {
-        margin: 1em;
-        padding: 1em; }
-      main#form-container-different-main div.box-form-img form div.grid-btn-form button {
-        margin: 1em; }
+      grid-template-rows: auto; }
 
 @media screen and ((min-width: 768px)) {
   main#form-container-different-main div.box-form-img {
@@ -147,26 +123,76 @@ main#form-container-different-main div.box-form-img {
       main#form-container-different-main div.box-form-img form div.grid-btn-form {
         display: grid;
         grid-template-columns: 1.5fr 1.5fr;
-        grid-template-rows: 1fr 1fr 1fr auto auto;
+        grid-template-rows: auto auto auto auto auto 0.2fr;
         gap: 2em;
         margin: 1.2em;
         padding: 1em; }
-        main#form-container-different-main div.box-form-img form div.grid-btn-form label {
-          font-size: 1em;
-          font-weight: 500;
-          text-align: center;
-          margin: 1em;
-          padding: 1em; }
-        main#form-container-different-main div.box-form-img form div.grid-btn-form input {
-          margin: 1em;
-          padding: 1em;
-          border-radius: 50px; }
-        main#form-container-different-main div.box-form-img form div.grid-btn-form select {
-          margin: 1em;
-          padding: 1em; }
-        main#form-container-different-main div.box-form-img form div.grid-btn-form textarea {
-          margin: 1em;
-          padding: 1em; } }
+        main#form-container-different-main div.box-form-img form div.grid-btn-form div.container-region-specific {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 4;
+          grid-row-end: 4; }
+          main#form-container-different-main div.box-form-img form div.grid-btn-form div.container-region-specific select {
+            width: 50%, 768px, 100% option; }
+        main#form-container-different-main div.box-form-img form div.grid-btn-form div.container-topic-specific {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 5;
+          grid-row-end: 5;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          padding: auto; }
+        main#form-container-different-main div.box-form-img form div.grid-btn-form div.container-btn-specific {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 6;
+          grid-row-end: 6;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          margin: 3rem; } }
+
+@media screen and ((min-width: 1025px)) {
+  main#form-container-different-main div.box-form-img form div.grid-btn-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1f 0.2fr;
+    width: 1000px; }
+    main#form-container-different-main div.box-form-img form div.grid-btn-form div.container-btn-specific button {
+      margin: 30%;
+      padding: 5%; } }
+
+main#pay section.grid-pay-examples div.four__types__of__pay {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr; }
+  main#pay section.grid-pay-examples div.four__types__of__pay div.container-pay {
+    border-style: groove;
+    border-color: grey;
+    border-radius: 18px;
+    background: #ffffff;
+    margin: 1.2em;
+    padding: 1em;
+    box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff; }
+
+main#about-me section.intro-about div.container-h2-specific h2 {
+  font-size: 1.5em;
+  font-weight: 999;
+  text-align: center;
+  margin-top: 7rem;
+  margin-bottom: 1em;
+  padding: 1em; }
+
+main#about-me div.container-p-specific p {
+  text-align: left;
+  margin: 1em;
+  padding: 1em;
+  text-shadow: #4c4c47; }
 
 section.description-main {
   display: grid;

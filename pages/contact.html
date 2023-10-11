@@ -59,7 +59,7 @@
               Clases particulares de historia, lenguaje, ciencias sociales, filosofía y seguimiento de tesis
             </h2>
           </div>
-      </header>
+    </header>
     <main id="form-container-different-main">
         <div class="container-main box-form-img">
             <form action="" method="post">
@@ -70,7 +70,8 @@
                     <input id="text-input-mail" type="email" placeholder="Correo...">
                     <label for="text-input-tel">Celular | Contacto</label>
                     <input type="tel" name="" id="text-input-tel" placeholder="+(56) 9 1234 5678">
-                    <select class="form-select" aria-label="Default select example">
+                    <div class="container-region-specific">
+                      <select class="form-select" aria-label="Default select example">
                         <option selected>Escoga su región</option>
                         <option value="1">Arica y Parinacota</option>
                         <option value="2">Tarapacá</option>
@@ -89,11 +90,16 @@
                         <option value="15">Aysén del General Carlos Ibáñez del Campo</option>
                         <option value="16">Magallanes y de la Antártica Chilena</option>
                     </select>
-                    <label for="text-input-subject">Asunto | Resumen</label>
-                    <textarea name="" id="" cols="40" rows="8"
-                        placeholder="Describa qué necesidad tiene su hijo/a"></textarea>
-                    <button type="submit" class="btn btn-dark">Enviar</button>
-                    <button type="reset" class="btn btn-dark">Borrar</button>
+                    </div>
+                    <div class="container-topic-specific">
+                      <label for="text-input-subject">Asunto | Resumen</label>
+                      <textarea name="" id="" cols="40" rows="8"
+                          placeholder="Describa qué necesidad tiene su hijo/a"></textarea>  
+                    </div>
+                    <div class="container-btn-specific">
+                      <button type="submit" class="btn btn-dark">Enviar</button>
+                      <button type="reset" class="btn btn-dark">Borrar</button>  
+                    </div>
                 </div>
             </form>
             <div class="img-between-form">
@@ -121,7 +127,7 @@
               <a href="./terms.html">Términos y condiciones</a>
             </p>
           </div>
-      </footer>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>

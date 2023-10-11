@@ -145,7 +145,7 @@ section.intro-services {
     }
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and ($vistamobile2) {
   section.intro-services {
     div.container-intro-services {
       margin: 2.3em;
@@ -173,58 +173,21 @@ main#form-container-different-main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1.2em;
-    padding: 1em;
     form {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin: 1.2em;
-      padding: 1em;
       div.grid-btn-form {
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: auto;
-        gap: 2em;
-        margin: 1.2em;
-        padding: 1em;
-        label {
-          font-size: 1em;
-          font-weight: 500;
-          text-align: center;
-          margin: 1em;
-          padding: 1em;
-        }
-        input {
-          margin: 1em;
-          padding: 1em;
-        }
-        select {
-          margin: 1em;
-          padding: 1em;
-          option {
-          }
-        }
-        textarea {
-          margin: 1em;
-          padding: 1em;
-        }
-        button {
-          margin: 1em;
-          a {
-          }
-        }
-      }
-      div.img-between-form {
-        img {
-        }
-        h3 {
-        }
-      }
+     }
     }
-  }
+  } 
+}
   @media screen and ($vistamobile2) {
+  main#form-container-different-main {
     div.box-form-img {
       display: grid;
       grid-template-columns: auto;
@@ -252,37 +215,137 @@ main#form-container-different-main {
         div.grid-btn-form {
           display: grid;
           grid-template-columns: 1.5fr 1.5fr;
-          grid-template-rows: 1fr 1fr 1fr auto auto;
+          grid-template-rows: auto auto auto auto auto 0.2fr;
           gap: 2em;
           margin: 1.2em;
           padding: 1em;
-          label {
-            font-size: 1em;
-            font-weight: 500;
-            text-align: center;
-            margin: 1em;
-            padding: 1em;
-          }
-          input {
-            margin: 1em;
-            padding: 1em;
-            border-radius: 50px;
-          }
-          select {
-            margin: 1em;
-            padding: 1em;
-            option {
+          div.container-region-specific {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 4;
+            grid-row-end: 4;
+            select {
+              width: (50%, 768px, 100%)
+              option {
+              }
             }
           }
-          textarea {
-            margin: 1em;
-            padding: 1em;
+          div.container-topic-specific {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 5;
+            grid-row-end: 5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: auto;
+            label {
+              textarea {
+              }
+            }
+          }
+          div.container-btn-specific {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 6;
+            grid-row-end: 6;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 3rem;
+            button {
+            }
           }
         }
       }
     }
+  }
 }
+  @media screen and ($vistadesktop) {
+  main#form-container-different-main {
+    div.box-form-img {
+      form {
+        div.grid-btn-form {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1f 0.2fr;
+          width: 1000px;
+          div.container-region-specific {
+          }
+          div.container-topic-specific {
+          }
+          div.container-btn-specific {
+            button {
+              margin: 30%;
+              padding: 5%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
+//PAY-MAIN
+main#pay  {
+  section.introduction-to-pay {
+    div.container-h2 {
+      h2 {
+
+      }
+    }
+    div.container-unique-pay {
+    }
+  }
+  section.grid-pay-examples {
+    div.four__types__of__pay {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr;
+      div.container-pay {
+        border-style: groove;
+        border-color: $color1;
+        border-radius: 18px;
+        background: #ffffff;
+        margin: 1.2em;
+        padding: 1em;
+        box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff;
+        h3{
+
+        }
+        p {
+
+        };
+      }
+    }
+  }
+}
+//ABOUT-ME-MAIN
+main#about-me {
+  section.intro-about {
+    div.container-h2-specific {
+      h2 {
+        font-size: 1.5em;
+        font-weight: 999;
+        text-align: center;
+        margin-top: 7rem;
+        margin-bottom: 1em;
+        padding: 1em;
+      }
+    }
+  }
+    div.container-p-specific {
+      p {
+        text-align: left;
+        margin: 1em;
+        padding: 1em;
+        text-shadow: #4c4c47;
+      }
+    }
+  }
 //CARDS-MAIN
 section.description-main {
   display: grid;
