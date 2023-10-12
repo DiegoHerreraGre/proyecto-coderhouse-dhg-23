@@ -204,6 +204,20 @@ main#form-container-different-main div.box-form-img {
         margin: 0;
         padding: 5%; } }
 
+main#pay section.introduction-to-pay div.container-h2 h2 {
+  font-size: 1.5em;
+  font-weight: 999;
+  text-align: center;
+  margin-top: 7rem;
+  margin-bottom: 1em;
+  padding: 1em; }
+
+main#pay section.introduction-to-pay div.container-unique-pay p {
+  text-align: left;
+  margin: 3em;
+  padding: 2em;
+  text-shadow: #4c4c47; }
+
 main#pay section.grid-pay-examples div.four__types__of__pay {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -216,6 +230,44 @@ main#pay section.grid-pay-examples div.four__types__of__pay {
     margin: 1.2em;
     padding: 1em;
     box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff; }
+    main#pay section.grid-pay-examples div.four__types__of__pay div.container-pay img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; }
+
+@media screen and ((min-width: 768px)) {
+  main#pay section.grid-pay-examples div.four__types__of__pay {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; }
+    main#pay section.grid-pay-examples div.four__types__of__pay div.container-pay {
+      border-style: groove;
+      border-color: grey;
+      border-radius: 18px;
+      background: #ffffff;
+      margin: 1.2em;
+      padding: 1em;
+      box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff; }
+    main#pay section.grid-pay-examples div.four__types__of__pay .one {
+      grid-column-start: 1;
+      grid-column-end: 1;
+      grid-row-start: 1;
+      grid-row-end: 1; }
+    main#pay section.grid-pay-examples div.four__types__of__pay .two {
+      grid-column-start: 2;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 1; }
+    main#pay section.grid-pay-examples div.four__types__of__pay .three {
+      grid-column-start: 1;
+      grid-column-end: 1;
+      grid-row-start: 2;
+      grid-row-end: 2; }
+    main#pay section.grid-pay-examples div.four__types__of__pay .four {
+      grid-column-start: 2;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 2; } }
 
 main#about-me section.intro-about div.container-h2-specific h2 {
   font-size: 1.5em;

@@ -357,10 +357,21 @@ main#pay  {
   section.introduction-to-pay {
     div.container-h2 {
       h2 {
-
+        font-size: 1.5em;
+        font-weight: 999;
+        text-align: center;
+        margin-top: 7rem;
+        margin-bottom: 1em;
+        padding: 1em;
       }
     }
     div.container-unique-pay {
+      p {
+        text-align: left;
+        margin: 3em;
+        padding: 2em;
+        text-shadow: #4c4c47;
+      }
     }
   }
   section.grid-pay-examples {
@@ -377,11 +388,58 @@ main#pay  {
         padding: 1em;
         box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff;
         h3{
-
         }
         p {
-
-        };
+        }
+        img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+    @media screen and ($vistamobile2) {
+      div.four__types__of__pay {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        div.container-pay {
+          border-style: groove;
+          border-color: $color1;
+          border-radius: 18px;
+          background: #ffffff;
+          margin: 1.2em;
+          padding: 1em;
+          box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff;
+          h3{
+          }
+          p {
+          }
+        }
+        .one {
+          grid-column-start: 1;
+          grid-column-end: 1;
+          grid-row-start: 1;
+          grid-row-end: 1;
+        }
+        .two {
+          grid-column-start: 2;
+          grid-column-end: 2;
+          grid-row-start: 1;
+          grid-row-end: 1;
+        } 
+        .three {
+          grid-column-start: 1;
+          grid-column-end: 1;
+          grid-row-start: 2;
+          grid-row-end: 2;
+        }
+        .four {
+          grid-column-start: 2;
+          grid-column-end: 2;
+          grid-row-start: 2;
+          grid-row-end: 2;
+        } 
       }
     }
   }
