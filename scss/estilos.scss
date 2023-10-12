@@ -1,10 +1,7 @@
 //Variables y otras cosas
 
 $vistaminimobile: (
-  max-width: 320px,
-);
-$vistamobile: (
-  max-width: 768px,
+  max-width: 350px,
 );
 $vistatablet: (
   max-width: 1024px,
@@ -66,7 +63,7 @@ header {
       text-align: center;
       padding: 1em;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and ($vistamobile2) {
         h1 {
           font-size: $h1Desktop * 2;
           font-weight: 999;
@@ -74,7 +71,7 @@ header {
         }
     }
   }
-  @media screen and (min-width: 768px) {
+  @media screen and ($vistamobile2) {
     div.header-title-hero {
       border-radius: 10px;
       background: #ffffff;
@@ -84,7 +81,7 @@ header {
   div.header-title-hero-2 {
       h2.animated-text {
         z-index: -1;
-        height: 300px;
+        height: 500px;
         padding: 30px;
         white-space: wrap;
         letter-spacing: 0.2em;
@@ -110,8 +107,43 @@ header {
         }
       }
     }
+    @media screen and ($vistaminimobile) {
+      div.header-title-hero {
+        border-radius: 10px;
+        background: #ffffff;
+        box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff;
+      }
+      div.header-title-hero-2 {
+        h2.animated-text {
+          display: none;
+        }
+      }
+    }
 }
 //MAIN
+//MAIN-SYSTEM
+main#system {
+  section.intro-system {
+    div.container-intro-system {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 3em;
+      margin-top: 10em;
+      padding: 2em;
+      border-style: solid;
+      border-color: $color1;
+      border-radius: 18px;
+      background: #ffffff;
+      box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff;
+      width: (50%, 1024px, 70%);
+      p {
+
+      }
+    }
+  }
+}
 //CAROUSEL
 section.carousel-autoplay {
   div {
@@ -197,6 +229,7 @@ main#form-container-different-main {
       padding: 1em;
       justify-content: center;
       align-items: center;
+      text-align: center;
       form {
         background: $color--original--palette--gray;
         background: linear-gradient(
@@ -211,13 +244,14 @@ main#form-container-different-main {
         justify-content: center;
         align-items: center;
         border-radius: 5rem;
-        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);  
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.657);  
+        text-align: center;
         div.grid-btn-form {
           display: grid;
           grid-template-columns: 1.5fr 1.5fr;
           grid-template-rows: auto auto auto auto auto 0.2fr;
-          gap: 2em;
-          margin: 1.2em;
+          gap: 5em;
+          margin: 3em;
           padding: 1em;
           div.container-region-specific {
             grid-column-start: 1;
@@ -281,6 +315,35 @@ main#form-container-different-main {
           div.container-btn-specific {
             button {
               margin: 30%;
+              padding: 5%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+  @media screen and ($vistaminimobile) {
+  main#form-container-different-main {
+    div.box-form-img {
+      form {
+        text-align: center;
+        div.grid-btn-form {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 1f 0.2fr;
+          width: 100%;
+          div.container-region-specific {
+          }
+          div.container-topic-specific {
+            label {
+              textarea {
+              }
+            }
+          }
+          div.container-btn-specific {
+            button {
+              margin: 0;
               padding: 5%;
             }
           }
@@ -425,6 +488,11 @@ footer {
     align-items: center;
     margin: 2em;
     padding: 1em;
+    &:hover  {
+      animation: shake infinite;
+      animation-duration: 1s;
+    }
+    
     a {
       img {
         width: 2.8em;
@@ -443,6 +511,8 @@ footer {
       flex-direction: row;
       margin: 1em;
       border-color: $color-btn;
+      animation: flash infinite;
+      animation-duration: 3s;
       a {
         text-decoration: none;
         color: $color-btn;
