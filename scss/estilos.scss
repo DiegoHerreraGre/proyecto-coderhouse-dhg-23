@@ -86,7 +86,7 @@ header {
   div.header-title-hero-2 {
       h2.animated-text {
         z-index: -1;
-        height: 500px;
+        height: 300px;
         padding: 30px;
         white-space: wrap;
         letter-spacing: 0.2em;
@@ -137,8 +137,6 @@ main#system {
       margin: 3em;
       margin-top: 10em;
       padding: 2em;
-      border-style: solid;
-      border-color: $color1;
       border-radius: 18px;
       background: #ffffff;
       box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff;
@@ -460,6 +458,7 @@ main#pay  {
         padding: 1em;
         box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff;
         background: linear-gradient(156deg, rgba(142,142,142,1) 0%, rgba(169,169,255,1) 46%, rgba(183,243,255,1) 100%);
+        color: $color0;
         h3{
         }
         p {
@@ -544,12 +543,9 @@ section.description-main {
   grid-template-rows: auto;
   gap: 1em;
     div {
-      border-style: solid;
-      border-color: $color1;
       border-radius: 18px;
       background: #ffffff;
       margin: 1.2em;
-      box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff;
       .card-title {
         font-size: 1.5em;
         font-weight: 999;
@@ -574,12 +570,9 @@ section.description-main {
     gap: 2em;
     margin-top: 2.3em;
     div {
-      border-style: solid;
-      border-color: $color1;
       border-radius: 18px;
       background: #ffffff;
       margin: 1.2em;
-      box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff;
       .card-title {
         font-size: 1.5em;
         font-weight: 999;
@@ -608,7 +601,6 @@ footer {
   div.container-footer-img {
     border-radius: 22px;
     background: #ffffff;
-    box-shadow: -29px 29px 57px #d9d9d9, 29px -29px 57px #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -671,4 +663,14 @@ footer {
     margin-right: 30px;
     font-size: small;
     }
-  } 
+  }
+  @media screen and ($vistaminimobile) {
+    div.container-footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 2em;
+    width: 100px;
+    padding: 30px;
+  }
+}
