@@ -29,42 +29,6 @@ $blur: blur(10px);
 
 //Variables de gradientes
 
-$gradient-0: (
-  background: rgb(142,142,142)
-);
-$gradient-1: (
-  background: linear-gradient(156deg, rgba(142,142,142,1) 0%, rgba(169,169,255,1) 46%, rgba(183,243,255,1) 100%)
-);
-$gradient-2: (
-  background: rgb(254,211,230)
-);
-$gradient-3: (
-  background: radial-gradient(circle, rgba(254,211,230,1) 5%, rgba(179,180,227,1) 100%)
-);
-
-//Maps
-$map-gradient-0: (
-  background: rgb(142,142,142)
-  background: linear-gradient(156deg, rgba(142,142,142,1) 0%, rgba(169,169,255,1) 46%, rgba(183,243,255,1) 100%)
-);
-
-$map-gradient-1: (
-  background: rgb(254,211,230)
-  background: radial-gradient(circle, rgba(254,211,230,1) 5%, rgba(179,180,227,1) 100%)
-);
-
-$map-fusion: map-merge($map1:"map-gradient-0", $map2:"map-gradient-1");
-
-$gradient-1-map: (
-  First: $gradient-0,
-  Second: $gradient-1,
-);
-
-$gradient-2-map: (
-  First: $gradient-2,
-  Second: $gradient-3,
-);
-
 //Placeholders
 
 //Mixins
@@ -89,13 +53,15 @@ $color--original--palette--red: #ff0000;
   @import url("https://fonts.google;apis.com/css2?family=RocknRoll+One&display=swap");
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+body {
+  background: radial-gradient(circle, rgba(254,211,230,1) 5%, rgba(179,180,227,1) 100%);
+}
 header {
   div.header-title-hero {
     border-radius: 18px;
     background: #ffffff;
     box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff;
     margin: 1.5em;
-    background: $map-gradient-0;
     h1 {
       font-size: $h1Mobilepocket * 2;
       font-weight: 999;
@@ -514,7 +480,8 @@ main#pay  {
           border-radius: 18px;
           margin: 1.2em;
           padding: 1em;
-          background: linear-gradient(156deg, rgba(142,142,142,1) 0%, rgba(169,169,255,1) 46%, rgba(183,243,255,1) 100%);          h3{
+          background: linear-gradient(156deg, rgba(142,142,142,1) 0%, rgba(169,169,255,1) 46%, rgba(183,243,255,1) 100%);          
+          h3{
           }
           p {
           }
@@ -632,7 +599,6 @@ section.description-main {
 }
 //FOOTER
 footer {
-  background-color: $color0;
   height: 400px;
   display: flex;
   flex-direction: column;

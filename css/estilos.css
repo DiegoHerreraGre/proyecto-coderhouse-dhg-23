@@ -6,6 +6,9 @@
   box-sizing: border-box;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
 
+body {
+  background: radial-gradient(circle, #fed3e6 5%, #b3b4e3 100%); }
+
 header div.header-title-hero {
   border-radius: 18px;
   background: #ffffff;
@@ -262,13 +265,11 @@ main#pay section.grid-pay-examples div.four__types__of__pay {
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr; }
   main#pay section.grid-pay-examples div.four__types__of__pay div.container-pay {
-    border-style: groove;
-    border-color: grey;
     border-radius: 18px;
-    background: #ffffff;
     margin: 1.2em;
     padding: 1em;
-    box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff; }
+    box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff;
+    background: linear-gradient(156deg, #8e8e8e 0%, #a9a9ff 46%, #b7f3ff 100%); }
     main#pay section.grid-pay-examples div.four__types__of__pay div.container-pay img {
       display: block;
       margin-left: auto;
@@ -280,13 +281,10 @@ main#pay section.grid-pay-examples div.four__types__of__pay {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr; }
     main#pay section.grid-pay-examples div.four__types__of__pay div.container-pay {
-      border-style: groove;
-      border-color: grey;
       border-radius: 18px;
-      background: #ffffff;
       margin: 1.2em;
       padding: 1em;
-      box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff; }
+      background: linear-gradient(156deg, #8e8e8e 0%, #a9a9ff 46%, #b7f3ff 100%); }
     main#pay section.grid-pay-examples div.four__types__of__pay .one {
       grid-column-start: 1;
       grid-column-end: 1;
@@ -375,7 +373,6 @@ section.description-main {
         padding: 1em; } }
 
 footer {
-  background-color: white;
   height: 400px;
   display: flex;
   flex-direction: column;
