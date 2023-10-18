@@ -27,11 +27,25 @@ $color-span: #c0d6f6;
 $color-btn: #161616;
 $blur: blur(10px);
 
+//Variable de colores nueva 
+
+$electric-violet-50: #fbf4ff;
+$electric-violet-100: #f5e5ff;
+$electric-violet-200: #ecd0ff;
+$electric-violet-300: #ddacff;
+$electric-violet-400: #c876ff;
+$electric-violet-500: #b342ff;
+$electric-violet-600: #9b0fff;
+$electric-violet-700: #8b0ee2;
+$electric-violet-800: #7612b7;
+$electric-violet-900: #611093;
+$electric-violet-950: #43006f;
+
 //Variables de gradientes
 
 //Placeholders
 
-//Mixins
+//Mixins || Posibles
 $font--original--size--desktop: 1.5rem;
 $font--original--size--mobile: 0.7rem;
 $font--original--font--type: Rockwell Nova, sans-serif;
@@ -58,15 +72,14 @@ body {
 }
 header {
   div.header-title-hero {
-    border-radius: 18px;
-    background: #ffffff;
-    box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff;
-    margin: 1.5em;
+    margin: 1.2em;
     h1 {
       font-size: $h1Mobilepocket * 2;
       font-weight: 999;
       text-align: center;
+      border-radius: 18px;
       padding: 1em;
+      background: $electric-violet-100;
     }
     @media screen and ($vistamobile2) {
         h1 {
@@ -79,8 +92,6 @@ header {
   @media screen and ($vistamobile2) {
     div.header-title-hero {
       border-radius: 10px;
-      background: #ffffff;
-      box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff;
     }
   }
   div.header-title-hero-2 {
@@ -115,8 +126,6 @@ header {
     @media screen and ($vistaminimobile) {
       div.header-title-hero {
         border-radius: 10px;
-        background: #ffffff;
-        box-shadow: 15px 15px 32px #808080, -31px -31px 63px #ffffff;
       }
       div.header-title-hero-2 {
         h2.animated-text {
@@ -164,12 +173,15 @@ section.carousel-autoplay {
 section.intro-services {
   div.container-intro-services {
     margin: 1.2em;
+    background-color: $electric-violet-900;
+    border-radius: 18px;
     h2 {
       font-size: 1.5em;
       font-weight: 999;
       text-align: center;
       margin: 0.5em;
       padding: 0.5em;
+      color: $electric-violet-50;
     }
     p {
       font-size: 1em;
@@ -177,6 +189,29 @@ section.intro-services {
       text-align: left;
       margin: 1em;
       padding: 1em;
+      color: $electric-violet-50;
+    }
+  }
+}
+@media screen and ($vistaminimobile) {
+  section.intro-services {
+    div.container-intro-services {
+      margin: 2.3em;
+      background-color: $electric-violet-900;
+      h2 {
+        font-size: 1.5em;
+        font-weight: 999;
+        text-align: center;
+        margin: 1em;
+        padding: 1em;
+      }
+      p {
+        font-size: 1em;
+        font-weight: 500;
+        text-align: center;
+        margin: 1em;
+        padding: 1em;
+      }
     }
   }
 }
@@ -184,6 +219,7 @@ section.intro-services {
   section.intro-services {
     div.container-intro-services {
       margin: 2.3em;
+      background-color: $electric-violet-900;
       h2 {
         font-size: 1.5em;
         font-weight: 999;
@@ -542,10 +578,11 @@ section.description-main {
   grid-template-columns: auto;
   grid-template-rows: auto;
   gap: 1em;
-    div {
+    div.card-desc, div.card-desc-2, div.card-desc-3, div.card-desc-4 {
       border-radius: 18px;
-      background: #ffffff;
-      margin: 1.2em;
+      background-color: $electric-violet-200;
+      margin: 1em;
+      box-shadow: $electric-violet-950 0px 0px 10px 0.1px;
       .card-title {
         font-size: 1.5em;
         font-weight: 999;
@@ -571,8 +608,9 @@ section.description-main {
     margin-top: 2.3em;
     div {
       border-radius: 18px;
-      background: #ffffff;
-      margin: 1.2em;
+      background-color: $electric-violet-200;
+      margin: 0.5em;
+      box-shadow: $electric-violet-950 0px 0px 10px 0.1px;
       .card-title {
         font-size: 1.5em;
         font-weight: 999;
@@ -600,7 +638,7 @@ footer {
 
   div.container-footer-img {
     border-radius: 22px;
-    background: #ffffff;
+    background-color: $electric-violet-300;
     display: flex;
     flex-direction: row;
     justify-content: center;
