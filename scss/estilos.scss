@@ -1,23 +1,26 @@
-//Variables y otras cosas
+//Variables para las Media Query
 
 $vistaminimobile: (
   max-width: 420px,
 );
 $vistatablet: (
-  max-width: 1024px,
+  min-width: 1024px,
 ); 
 $vistadesktop: (
   min-width: 1025px,
 );
 $vistamobile2: (
-  min-width: 768px,
+  min-width: 421px,
 );
+
+// Variables secundarias de uso
+
 $h1: 500px;
 $h1Desktop: 2rem;
 $h1Mobile: 1.3rem;
 $h1Mobilepocket: 0.9rem;
 
-//Variable de colores
+//Variable de colores --> primera versión | EN DESUSO
 
 $color0: white;
 $color1: grey;
@@ -27,7 +30,7 @@ $color-span: #c0d6f6;
 $color-btn: #161616;
 $blur: blur(10px);
 
-//Variable de colores nueva 
+//Variable de colores nueva --> Versión definitiva 
 
 $electric-violet-50: #fbf4ff;
 $electric-violet-100: #f5e5ff;
@@ -41,23 +44,75 @@ $electric-violet-800: #7612b7;
 $electric-violet-900: #611093;
 $electric-violet-950: #43006f;
 
-//Variables de gradientes
+//Mixins posteriores a la creación de variables --> posibles uso para la segunda versión de esta página con JavaScript y React. No se usaron en esta versión porque el código CSS y HTML, con los ID y clases ya estaba creado. Pero se han hecho estos mixins pensando en las necesidades que surgieron del código.
 
-//Placeholders
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
 
-//Mixins || Posibles
+@mixin flex-center($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+//Maps posteriores a la creación variables
+
 $font--original--size--desktop: 1.5rem;
 $font--original--size--mobile: 0.7rem;
 $font--original--font--type: Rockwell Nova, sans-serif;
 $font--alternative--size--mobile: 0.4rem;
-$font--alternative--size--desktop: 1rem;
+$font--alternative--size--desktop: 1.2rem;
 $font--alternative--font--type: Rockwell Nova, sans-serif;
-$color--original--palette--gray: #656560;
-$color--original--palette--white: #ccccc1;
-$color--original--palette--black: #4c4c47;
-$color--original--palette--red: #ff0000;
 
-//Traspaso de información de un archivo a otro
+$font--original--size--desktop--map: (
+  font-size: $font--original--size--desktop,
+  font-family: $font--original--font--type,
+);
+$font--original--size--mobile--map: (
+  font-size: $font--original--size--mobile,
+  font-family: $font--original--font--type,
+);
+$font--alternative--size--mobile--map: (
+  font-size: $font--alternative--size--mobile,
+  font-family: $font--alternative--font--type,
+);
+$font--alternative--size--desktop--map: (
+  font-size: $font--alternative--size--desktop,
+  font-family: $font--alternative--font--type,
+);
+
+//Placeholders
+
+%placeholder--font--original--size--desktop {
+  font-size: $font--original--size--desktop;
+  font-family: $font--original--font--type;
+}
+%placeholder--font--original--size--mobile {
+  font-size: $font--original--size--mobile;
+  font-family: $font--original--font--type;
+}
+%placeholder--font--alternative--size--mobile {
+  font-size: $font--alternative--size--mobile;
+  font-family: $font--alternative--font--type;
+}
+%placeholder--font--alternative--size--desktop {
+  font-size: $font--alternative--size--desktop;
+  font-family: $font--alternative--font--type;
+}
+
+//CSS style.css --> SCSS --> estilos.css (VERSIÓN DEFINITIVA)
 //HEADER
 * {
   margin: 0;
@@ -238,229 +293,47 @@ section.intro-services {
   }
 }
 //FORM
-main#form-container-different-main {
-  div.box-form-img {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    form {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      div.grid-btn-form {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-     }
-    }
-  } 
-}
-  @media screen and ($vistamobile2) {
-  main#form-container-different-main {
-    div.box-form-img {
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: auto;
-      gap: 2em;
-      margin: 1.2em;
-      padding: 1em;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      form {
-        background: $color--original--palette--gray;
-        background: linear-gradient(
-            to right bottom,
-            rgba(185, 185, 185, 0.703),
-            rgba(196, 196, 196, 0.129)
-        );
-        backdrop-filter: $blur;
-        width: (50%, 768px, 100%);
-        height: (50%, 768px, 100%);
-        z-index: 1;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5rem;
-        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.657);  
+main#form-container-different-main{
+  article.form-glass-effect{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2em;
+    margin: 2em;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    *{
+      label{ 
+        font-size: 1.3em;
+        font-weight: 500;
         text-align: center;
-        div.grid-btn-form {
-          display: grid;
-          grid-template-columns: 1.5fr 1.5fr;
-          grid-template-rows: auto auto auto auto auto 0.2fr;
-          gap: 5em;
-          margin: 3em;
-          padding: 1em;
-          div.container-region-specific {
-            grid-column-start: 1;
-            grid-column-end: 2;
-            grid-row-start: 4;
-            grid-row-end: 4;
-            select {
-              width: (3%, 320px, 100%)
-              option {
-              }
-            }
-          }
-          div.container-topic-specific {
-            grid-column-start: 1;
-            grid-column-end: 2;
-            grid-row-start: 5;
-            grid-row-end: 5;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: auto;
-            label {
-              textarea {
-              }
-            }
-          }
-          div.container-btn-specific {
-            grid-column-start: 1;
-            grid-column-end: 2;
-            grid-row-start: 6;
-            grid-row-end: 6;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            width: auto;
-            margin: 3rem;
-            button {
-            }
-          }
+        margin: 0;
+        padding: 1rem;
+        color: $electric-violet-600;
+        text-shadow: #4c4c47;
+      }
+      button{
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        align-items:center;
+        margin: 1em;
+        border-color: $color-btn;
+        animation: flash infinite;
+        animation-duration: 3s;
+        a{
+          text-decoration:none;
+          color: $color-btn;
+          font-size: 1em;
+          font-weight: 500;
+          padding: 0.2em;
+          color: $color0;
         }
       }
     }
   }
 }
-@media screen and ($vistadesktop) {
-  main#form-container-different-main {
-    div.box-form-img {
-      form {
-        div.grid-btn-form {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          width: 700px;
-          div.container-region-specific {
-          }
-          div.container-topic-specific {
-          }
-          div.container-btn-specific {
-            button {
-            }
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and ($vistatablet) {
-  main#form-container-different-main {
-    div.box-form-img {
-      form {
-        div.grid-btn-form {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          width: 700px;
-          div.container-region-specific {
-          }
-          div.container-topic-specific {
-          }
-          div.container-btn-specific {
-            width: 0;
-            align-self: center;
-            button {
-              margin: 3em;
-              padding: 10px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-  @media screen and ($vistaminimobile) {
-  main#form-container-different-main {
-    div.box-form-img {
-      form {
-        background-color: $color--original--palette--white;
-        div.grid-btn-form {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          width: 40%;
-          div.container-region-specific {
-          }
-          div.container-topic-specific {
-            label {
-              textarea {
-              }
-            }
-          }
-          div.container-btn-specific {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            width: auto;
-            margin: 2em;
-            button {
-            }
-          }
-        }
-      }
-    }
-  }
-}
-  @media screen and (max-width: 767px) {
-    main#form-container-different-main {
-      div.box-form-img {
-        form {
-          background: $color--original--palette--gray;
-          background: linear-gradient(
-              to right bottom,
-              rgba(185, 185, 185, 0.703),
-              rgba(196, 196, 196, 0.129)
-          );
-          backdrop-filter: $blur;
-          width: (50%, 768px, 100%);
-          height: (50%, 768px, 100%);
-          z-index: 1;
-          justify-content: center;
-          align-items: center;
-          border-radius: 5rem;
-          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.657);  
-          text-align: center;
-          div.grid-btn-form {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: auto;
-            margin: 30px;
-            div.container-region-specific {
-            }
-            div.container-topic-specific {
-            }
-            div.container-btn-specific {
-              display: flex;
-              margin: 0;
-              padding: auto;
-              width: auto;
-              button {
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 //PAY-MAIN
 main#pay  {
   section.introduction-to-pay {
@@ -549,7 +422,136 @@ main#pay  {
     }
   }
 }
-//ABOUT-ME-MAIN
+//SYSTEM-MAIN
+main#system {
+  @media screen and ($vistaminimobile) {
+    section.intro-system {
+      div.container-intro-system {
+        p {
+          font-size: 1em;
+          font-weight: 500;
+          text-align: left;
+          margin: 1em;
+          padding: 1em;
+          color: $electric-violet-700;
+        }
+        div#img__uniform 
+        {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 75%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  @media screen and ($vistamobile2) {
+    section.intro-system {
+      div.container-intro-system {
+        p {
+          font-size: 1em;
+          font-weight: 500;
+          text-align: left;
+          margin: 1em;
+          padding: 1em;
+          color: $electric-violet-700;
+        }
+        div#img__uniform 
+        {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 75%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  @media screen and ($vistatablet) {
+    section.intro-system {
+      div.container-intro-system {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 1em;
+        margin: 1.2em;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 2em;
+        margin: 2em;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            p {
+          font-size: 1em;
+          font-weight: 500;
+          text-align: left;
+          margin: 1em;
+          padding: 1em;
+          color: $electric-violet-500;
+        }
+        div#img__uniform 
+        {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 75%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  @media screen and ($vistadesktop) {
+    section.intro-system {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 1em;
+      margin: 1.2em;
+      div.container-intro-system {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 2em;
+        margin: 2em;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        p {
+          font-size: 1em;
+          font-weight: 500;
+          text-align: left;
+          margin: 1em;
+          padding: 1em;
+          color: $electric-violet-500;
+        }
+        div#img__uniform 
+        {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+  //ABOUT-ME-MAIN
 main#about-me {
   section.intro-about {
     div.container-h2-specific {
@@ -557,7 +559,7 @@ main#about-me {
         font-size: 1.5em;
         font-weight: 999;
         text-align: center;
-        margin-top: 7rem;
+        margin-top: 3rem;
         margin-bottom: 1em;
         padding: 1em;
       }
@@ -570,6 +572,16 @@ main#about-me {
         padding: 1em;
         text-shadow: #4c4c47;
       }
+    }
+      div.container-img-about {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 75%;
+          height: auto;
+        }
     }
   }
 //CARDS-MAIN
@@ -710,5 +722,18 @@ footer {
     margin: 2em;
     width: 100px;
     padding: 30px;
+  }
+}
+footer#contact-btn-display-none{
+  div.container-footer-img{
+  }
+  div.btn-contact-stats{
+    *{
+      display:none;
+    }
+  }
+  div.container-footer-line{
+  }
+  div.container-footer{
   }
 }
