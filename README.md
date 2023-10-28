@@ -46,3 +46,7 @@ EN PROCESO:
 1) Se creará para las siguientes versiones una nueva rama llamada "Animations"
 2) HTML 3, 4 y 5 serán los siguientes en quedar listos.
 3) Se aplicará la misma paleta de colores. 
+
+VERSIÓN FINAL
+
+Se ha subido a Webhot, a GITHUB Pages y se ha corregido los pormenores finales de la pre entrega. 
