@@ -50,3 +50,9 @@ EN PROCESO:
 VERSIÓN FINAL
 
 Se ha subido a Webhot, a GITHUB Pages y se ha corregido los pormenores finales de la pre entrega. 
+
+NUEVA VERSIÓN CON JS 
+
+Para mejorar la interactividad con la página web, se ha propuesto una inclusión de JS para darle mayor dinamismo al sitio. 
+
+1) El primer trabajo que se hará en el código será agregar un arreglo dentro de la página contact.html que permitirá construir una pequeña base de dato con las personas que manden el contacto al host. 
