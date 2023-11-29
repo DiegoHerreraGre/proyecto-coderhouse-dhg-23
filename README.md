@@ -64,3 +64,4 @@ VERSIÓN 1.2.0 --> JS EN EL FORMULARIO DE CONTACTO
 3) Se crea un evento para cuando se hace click en el formulario tanto para cuando se aprieta el botón de borrar+
 4) Se hacen dos funciones para acompañar todas estas expresiones
 5) Se regresa el valor del array con los datos del usuario creado gracias a la clase y el constructor.
+6) Se crea un filtro para que en el array se pueda buscar por región. En este mismo principio se puede conseguir más filtros necesarios por si se quiere manejar una base de datos en un servidor externo.

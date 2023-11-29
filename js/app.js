@@ -45,3 +45,13 @@ function borrarDatos() {
     document.querySelector("#region").value = "";
     document.querySelector("#comment").value = "";
 }
+
+// Crearemos un filtro de búsqueda dentro del array por región 
+
+let filtrarRegion = document.querySelector("#region");
+
+filtrarRegion.addEventListener("change", (e) => {
+    let region = e.target.value;
+    const filtroRegion = dataUser.filter((user) => user.region === region);
+    console.log(filtroRegion);
+});
