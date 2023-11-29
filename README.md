@@ -56,3 +56,11 @@ NUEVA VERSIÓN CON JS
 Para mejorar la interactividad con la página web, se ha propuesto una inclusión de JS para darle mayor dinamismo al sitio. 
 
 1) El primer trabajo que se hará en el código será agregar un arreglo dentro de la página contact.html que permitirá construir una pequeña base de dato con las personas que manden el contacto al host. 
+
+VERSIÓN 1.2.0 --> JS EN EL FORMULARIO DE CONTACTO
+
+1) Se agrega una clase que permite construir cada usuario que ingresa información en el formulario
+2) Se crea una variable let que es un array para el ingreso de datos
+3) Se crea un evento para cuando se hace click en el formulario tanto para cuando se aprieta el botón de borrar+
+4) Se hacen dos funciones para acompañar todas estas expresiones
+5) Se regresa el valor del array con los datos del usuario creado gracias a la clase y el constructor.

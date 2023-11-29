@@ -1,44 +1,47 @@
-class UserFormData {
+class User {
     name;
     lastname;
     email;
     comment;
     region;
-
-    constructor(nombre, apellido, email, comentario, region) {
-        this.name = nombre;
-        this.lastname = apellido;
+    constructor(name, lastname, email, comment, region) {
+        this.name = name;
+        this.lastname = lastname;
         this.email = email;
-        this.comment = comentario;
+        this.comment = comment;
         this.region = region;
     }
 }
+// Array para almacenar los datos del formulario
 
 let dataUser = [];
-
-document.getElementById("form-container-different-main").addEventListener("click", getFormData);
-
-function getFormData(event) {
-    console.log("Formulario enviado");
-    event.preventDefault();
-    const nombre = document.querySelectorAll("#name").value;
-    const apellido = document.querySelectorAll("#lastname").value;
-    const email = document.querySelectorAll("#email").value;
-    const comentario = document.querySelectorAll("#comment").value;
-    const region = document.querySelectorAll("#region").value;
-    const userFormData = new UserFormData(nombre, apellido, email, comentario, region);
-    dataUser.push(userFormData);
-    return dataUser;
-}
-
-
-
-document.getElementsByClassName("btn.btn-dark").addEventListener("click", function() {
-
-    document.querySelectorAll("#name").value = "";
-    document.querySelectorAll("#lastname").value = "";
-    document.querySelectorAll("#email").value = "";
-    document.querySelectorAll("#region").value = "";
-    document.querySelectorAll("#comment").value = "";
+document.querySelector(".btn-send-reset").addEventListener(
+    "click", (e) => {
+    e.preventDefault();
+    agregarDatos();
 });
 
+// Función para agregar datos al array
+function agregarDatos() {
+    let nombre = document.querySelector("#name").value;
+    let apellido = document.querySelector("#lastname").value;
+    let email = document.querySelector("#email").value;
+    let comentario = document.querySelector("#comment").value;
+    let region = document.querySelector("#region").value;
+
+    let userFormData = new User(nombre, apellido, email, comentario, region);
+    dataUser.push(userFormData);
+
+    borrarDatos();
+}
+
+console.log(dataUser);
+
+// Función para borrar datos del formulario
+function borrarDatos() {
+    document.querySelector("#name").value = "";
+    document.querySelector("#lastname").value = "";
+    document.querySelector("#email").value = "";
+    document.querySelector("#region").value = "";
+    document.querySelector("#comment").value = "";
+}
