@@ -32,6 +32,8 @@ function agregarDatos() {
     let userFormData = new User(nombre, apellido, email, comentario, region);
     dataUser.push(userFormData);
 
+    guardarLocal ("dataUser", JSON.stringify(dataUser));
+
     borrarDatos();
 }
 
@@ -46,7 +48,7 @@ function borrarDatos() {
     document.querySelector("#comment").value = "";
 }
 
-// Crearemos un filtro de búsqueda dentro del array por región 
+// Crearemos un filtro de búsqueda dentro del array por región --> Solo para motivos de la prueba
 
 let filtrarRegion = document.querySelector("#region");
 
@@ -55,3 +57,19 @@ filtrarRegion.addEventListener("change", (e) => {
     const filtroRegion = dataUser.filter((user) => user.region === region);
     console.log(filtroRegion);
 });
+
+const guardarLocal = (dato, valor) => {
+    localStorage.setItem(dato, valor);
+}
+
+const varStorage = JSON.parse(localStorage.getItem("dataUser"));
+const auxVar = [];
+
+for (const i of varStorage) {
+    auxVar.push(new User(i.name, i.lastname, i.email, i.comment, i.region));
+};
+
+console.log(varStorage);
+
+
+
