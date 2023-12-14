@@ -69,7 +69,7 @@ function calcularPrecio(a, b, c) {
     }
 
     return compraCompleta.innerHTML = `
-    <table>
+    <table id="tabla__pagos">
         <thead>
             <tr>
                 <th>Orden de compra</th>

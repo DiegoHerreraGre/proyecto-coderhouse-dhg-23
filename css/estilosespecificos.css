@@ -1,0 +1,29 @@
+section#plan__selection {
+    display: flex;
+    flex-direction: column;
+}
+
+#menu__drop, #value__of__money, #cuotas{
+    font-size: larger;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+main#pay article {
+    border-style: none;
+    background-color: beige;
+    margin: 50px;
+    padding: 40px;
+    height: 700px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 30px 15px;
+}
+#tabla__pagos {
+    margin: 100px;
+    padding: 50px;
+}
+#tabla__pagos>tbody{
+    margin: 100px;
+    text-shadow: 10px;
+}

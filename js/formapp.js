@@ -71,5 +71,6 @@ for (const i of varStorage) {
 
 console.log(varStorage);
 
-
+const dataUserJSON = JSON.stringify(dataUser);
+console.log(dataUserJSON);
 
