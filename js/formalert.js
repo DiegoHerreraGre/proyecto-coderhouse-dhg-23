@@ -7,3 +7,4 @@ aux.addEventListener("click", (e) => {
     console.log("Puede revisar en consola los arrays con la información ingresada");
     alert("Formulario ingresado correctamente")
 });
+
