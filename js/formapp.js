@@ -12,7 +12,6 @@ class User {
         this.region = region;
     }
 }
-// Array para almacenar los datos del formulario
 
 let dataUser = [];
 document.querySelector(".btn-send-reset").addEventListener(
@@ -21,7 +20,6 @@ document.querySelector(".btn-send-reset").addEventListener(
     agregarDatos();
 });
 
-// Función para agregar datos al array
 function agregarDatos() {
     let nombre = document.querySelector("#name").value;
     let apellido = document.querySelector("#lastname").value;
@@ -39,7 +37,6 @@ function agregarDatos() {
 
 console.log(dataUser);
 
-// Función para borrar datos del formulario
 function borrarDatos() {
     document.querySelector("#name").value = "";
     document.querySelector("#lastname").value = "";
@@ -47,8 +44,6 @@ function borrarDatos() {
     document.querySelector("#region").value = "";
     document.querySelector("#comment").value = "";
 }
-
-// Crearemos un filtro de búsqueda dentro del array por región --> Solo para motivos de la prueba
 
 let filtrarRegion = document.querySelector("#region");
 
@@ -71,6 +66,22 @@ for (const i of varStorage) {
 
 console.log(varStorage);
 
-const dataUserJSON = JSON.stringify(dataUser);
-console.log(dataUserJSON);
+// Con un servidor podría funcionar el fetch de abajo. Faltaría añadir un servidor que reciba los datos y los almacene en una base de datos.
+
+fetch('http://localhost:3000/contacto', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(dataUser)
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error(error));
+
+borrarDatos();
+
+
+
+
 

@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/estilos.scss css/estilos.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "start": "node server.js",
+    "server": "json-server --watch db.json --port 3000",
+    "dev": "concurrently \"npm run server\" \"npm run watch-css\" \"npm run start\""
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +17,7 @@
   "nodemon": "^3.0.1",
   "dependencies": {
     "animate.css": "^4.1.1",
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "body-parser": "^1.20.2"
   }
 }

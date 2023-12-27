@@ -78,14 +78,35 @@ function calcularPrecio(a, b, c) {
         <tbody>
                 <tr>
                     <td>${planSeleccionado}</td>
+                    <br>
                     <td>${duracionSeleccionada}</td>
+                    <br>
                     <td>${precio}</td>
                 </tr>
-                <tr>
                     <td>Cálculo final</td>
+                    <br>
                     <td>${calculoFinal}</td>
+                    <br>
                     <td>${precioCuota}</td>
                 </tr>
         </tbody>
     </table>`
 }
+
+compraCompleta.style.width = "50%"
+compraCompleta.style.margin = "auto"
+compraCompleta.style.border = "1px solid black"
+compraCompleta.style.borderRadius = "10px"
+compraCompleta.style.padding = "1rem"
+compraCompleta.style.backgroundColor = "#ebebeb"
+compraCompleta.style.color = "black"
+
+// crear estilos dentor de la tabla generada
+
+const tablaPagos = document.getElementById("tabla__pagos")
+const tablaPagosTh = document.getElementsByTagName("th")
+const tablaPagosTd = document.getElementsByTagName("td")
+
+tablaPagosTd.style.border = "1px solid black"
+tablaPagosTd.style.padding = "1rem"
+tablaPagosTd.style.display = "flex"

@@ -16,6 +16,12 @@ class Cotizador {
     }
 }
 
+const hear = document.getElementById("menu__drop", "value__of__money")
+if (hear === hear.addEventListener("mouseover", calcularPrecio)) {
+    calcularPrecio()
+}
+
+
 async function calcularPrecio () {
     const plan = document.getElementById("menu__drop").value
     const precio = document.getElementById("value__of__money").value
