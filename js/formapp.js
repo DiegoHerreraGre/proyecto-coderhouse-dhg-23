@@ -88,7 +88,8 @@ form.addEventListener("submit", (event) => {
 
 borrarDatos()
 
-module.exports = User
+module.exports = userFormData
+module.exports = user
 module.exports = dataUser
 module.exports = agregarDatos
 module.exports = borrarDatos
