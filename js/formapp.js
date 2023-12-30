@@ -66,22 +66,34 @@ for (const i of varStorage) {
 
 console.log(varStorage);
 
-// Con un servidor podría funcionar el fetch de abajo. Faltaría añadir un servidor que reciba los datos y los almacene en una base de datos.
+const form = document.querySelector("form")
 
-fetch('http://localhost:3000/contacto', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(varStorage)
-})
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error(error));
+form.addEventListener("submit", (event) => {
+    event.preventDefault()
 
-borrarDatos();
+    const formData = new FormData(form)
+    const data = Object.fromEntries(formData)
 
+    fetch("http://localhost:8080", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+});
 
+borrarDatos()
 
-
-
+module.exports = User
+module.exports = dataUser
+module.exports = agregarDatos
+module.exports = borrarDatos
+module.exports = filtrarRegion
+module.exports = guardarLocal
+module.exports = varStorage
+module.exports = auxVar
+module.exports = form
