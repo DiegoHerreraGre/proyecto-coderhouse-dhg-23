@@ -1,0 +1,578 @@
+{
+    "Plan 1 --> 1 mes": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 1,
+        "Duración": "1 mes",
+        "Cuotas": 1
+    },
+    "Plan 2 --> 3 meses": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 2,
+        "Duración": "3 meses",
+        "Cuotas": 1
+    },
+    "Plan 3 --> 6 meses": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 3,
+        "Duración": "6 meses",
+        "Cuotas": 1
+    },
+    "Plan 4 --> 12 meses": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 4,
+        "Duración": "12 meses",
+        "Cuotas": 1
+    },
+    "Plan 5 --> 1 mes": {
+        "Plan": "Plan Integral",
+        "PlanId": 5,
+        "Duración": "1 mes",
+        "Cuotas": 1
+    },
+    "Plan 6 --> 3 meses": {
+        "Plan": "Plan Integral",
+        "PlanId": 6,
+        "Duración": "3 meses",
+        "Cuotas": 1
+    },
+    "Plan 7 --> 6 meses": {
+        "Plan": "Plan Integral",
+        "PlanId": 7,
+        "Duración": "6 meses",
+        "Cuotas": 1
+    },
+    "Plan 8 --> 12 meses": {
+        "Plan": "Plan Integral",
+        "PlanId": 8,
+        "Duración": "12 meses",
+        "Cuotas": 1
+    },
+    "Plan 9 --> 1 mes": {
+        "Plan": "Plan Premium",
+        "PlanId": 9,
+        "Duración": "1 mes",
+        "Cuotas": 1
+    },
+    "Plan 10 --> 3 meses": {
+        "Plan": "Plan Premium",
+        "PlanId": 10,
+        "Duración": "3 meses",
+        "Cuotas": 1
+    },
+    "Plan 11 --> 6 meses": {
+        "Plan": "Plan Premium",
+        "PlanId": 11,
+        "Duración": "6 meses",
+        "Cuotas": 1
+    },
+    "Plan 12 --> 12 meses": {
+        "Plan": "Plan Premium",
+        "PlanId": 12,
+        "Duración": "12 meses",
+        "Cuotas": 1
+    },
+    "Plan 13 --> 1 mes": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 13,
+        "Duración": "1 mes",
+        "Cuotas": 3
+    },
+    "Plan 14 --> 3 meses": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 14,
+        "Duración": "3 meses",
+        "Cuotas": 3
+    },
+    "Plan 15 --> 6 meses": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 15,
+        "Duración": "6 meses",
+        "Cuotas": 3
+    },
+    "Plan 16 --> 12 meses": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 16,
+        "Duración": "12 meses",
+        "Cuotas": 3
+    },
+    "Plan 17 --> 1 mes": {
+        "Plan": "Plan Integral",
+        "PlanId": 17,
+        "Duración": "1 mes",
+        "Cuotas": 3
+    },
+    "Plan 18 --> 3 meses": {
+        "Plan": "Plan Integral",
+        "PlanId": 18,
+        "Duración": "3 meses",
+        "Cuotas": 3
+    },
+    "Plan 19 --> 6 meses": {
+        "Plan": "Plan Integral",
+        "PlanId": 19,
+        "Duración": "6 meses",
+        "Cuotas": 3
+    },
+    "Plan 20 --> 12 meses": {
+        "Plan": "Plan Integral",
+        "PlanId": 20,
+        "Duración": "12 meses",
+        "Cuotas": 3
+    },
+    "Plan 21 --> 1 mes": {
+        "Plan": "Plan Premium",
+        "PlanId": 21,
+        "Duración": "1 mes",
+        "Cuotas": 3
+    },
+    "Plan 22 --> 3 meses": {
+        "Plan": "Plan Premium",
+        "PlanId": 22,
+        "Duración": "3 meses",
+        "Cuotas": 3
+    },
+    "Plan 23 --> 6 meses": {
+        "Plan": "Plan Premium",
+        "PlanId": 23,
+        "Duración": "6 meses",
+        "Cuotas": 3
+    },
+    "Plan 24 --> 12 meses": {
+        "Plan": "Plan Premium",
+        "PlanId": 24,
+        "Duración": "12 meses",
+        "Cuotas": 3
+    },
+    "Plan 25 --> 1 mes": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 25,
+        "Duración": "1 mes",
+        "Cuotas": 6
+    },
+    "Plan 26 --> 3 meses": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 26,
+        "Duración": "3 meses",
+        "Cuotas": 6
+    },
+    "Plan 27 --> 6 meses": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 27,
+        "Duración": "6 meses",
+        "Cuotas": 6
+    },
+    "Plan 28 --> 12 meses": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 28,
+        "Duración": "12 meses",
+        "Cuotas": 6
+    },
+    "Plan 29 --> 1 mes": {
+        "Plan": "Plan Integral",
+        "PlanId": 29,
+        "Duración": "1 mes",
+        "Cuotas": 6
+    },
+    "Plan 30 --> 3 meses": {
+        "Plan": "Plan Integral",
+        "PlanId": 30,
+        "Duración": "3 meses",
+        "Cuotas": 6
+    },
+    "Plan 31 --> 6 meses": {
+        "Plan": "Plan Integral",
+        "PlanId": 31,
+        "Duración": "6 meses",
+        "Cuotas": 6
+    },
+    "Plan 32 --> 12 meses": {
+        "Plan": "Plan Integral",
+        "PlanId": 32,
+        "Duración": "12 meses",
+        "Cuotas": 6
+    },
+    "Plan 33 --> 1 mes": {
+        "Plan": "Plan Premium",
+        "PlanId": 33,
+        "Duración": "1 mes",
+        "Cuotas": 6
+    },
+    "Plan 34 --> 3 meses": {
+        "Plan": "Plan Premium",
+        "PlanId": 34,
+        "Duración": "3 meses",
+        "Cuotas": 6
+    },
+    "Plan 35 --> 6 meses": {
+        "Plan": "Plan Premium",
+        "PlanId": 35,
+        "Duración": "6 meses",
+        "Cuotas": 6
+    },
+    "Plan 36 --> 12 meses": {
+        "Plan": "Plan Premium",
+        "PlanId": 36,
+        "Duración": "12 meses",
+        "Cuotas": 6
+    },
+    "Plan 37 --> 1 mes": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 37,
+        "Duración": "1 mes",
+        "Cuotas": 12
+    },
+    "Plan 38 --> 3 meses": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 38,
+        "Duración": "3 meses",
+        "Cuotas": 12
+    },
+    "Plan 39 --> 6 meses": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 39,
+        "Duración": "6 meses",
+        "Cuotas": 12
+    },
+    "Plan 40 --> 12 meses": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 40,
+        "Duración": "12 meses",
+        "Cuotas": 12
+    },
+    "Plan 41 --> 1 mes": {
+        "Plan": "Plan Integral",
+        "PlanId": 41,
+        "Duración": "1 mes",
+        "Cuotas": 12
+    },
+    "Plan 42 --> 3 meses": {
+        "Plan": "Plan Integral",
+        "PlanId": 42,
+        "Duración": "3 meses",
+        "Cuotas": 12
+    },
+    "Plan 43 --> 6 meses": {
+        "Plan": "Plan Integral",
+        "PlanId": 43,
+        "Duración": "6 meses",
+        "Cuotas": 12
+    },
+    "Plan 44 --> 12 meses": {
+        "Plan": "Plan Integral",
+        "PlanId": 44,
+        "Duración": "12 meses",
+        "Cuotas": 12
+    },
+    "Plan 45 --> 1 mes": {
+        "Plan": "Plan Premium",
+        "PlanId": 45,
+        "Duración": "1 mes",
+        "Cuotas": 12
+    },
+    "Plan 46 --> 3 meses": {
+        "Plan": "Plan Premium",
+        "PlanId": 46,
+        "Duración": "3 meses",
+        "Cuotas": 12
+    },
+    "Plan 47 --> 6 meses": {
+        "Plan": "Plan Premium",
+        "PlanId": 47,
+        "Duración": "6 meses",
+        "Cuotas": 12
+    },
+    "Plan 48 --> 12 meses": {
+        "Plan": "Plan Premium",
+        "PlanId": 48,
+        "Duración": "12 meses",
+        "Cuotas": 12
+    },
+    "Plan 49 --> 1 mes": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 49,
+        "Duración": "1 mes",
+        "Cuotas": 18
+    },
+    "Plan 50 --> 3 meses": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 50,
+        "Duración": "3 meses",
+        "Cuotas": 18
+    },
+    "Plan 51 --> 6 meses": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 51,
+        "Duración": "6 meses",
+        "Cuotas": 18
+    },
+    "Plan 52 --> 12 meses": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 52,
+        "Duración": "12 meses",
+        "Cuotas": 18
+    },
+    "Plan 53 --> 1 mes": {
+        "Plan": "Plan Integral",
+        "PlanId": 53,
+        "Duración": "1 mes",
+        "Cuotas": 18
+    },
+    "Plan 54 --> 3 meses": {
+        "Plan": "Plan Integral",
+        "PlanId": 54,
+        "Duración": "3 meses",
+        "Cuotas": 18
+    },
+    "Plan 55 --> 6 meses": {
+        "Plan": "Plan Integral",
+        "PlanId": 55,
+        "Duración": "6 meses",
+        "Cuotas": 18
+    },
+    "Plan 56 --> 12 meses": {
+        "Plan": "Plan Integral",
+        "PlanId": 56,
+        "Duración": "12 meses",
+        "Cuotas": 18
+    },
+    "Plan 57 --> 1 mes": {
+        "Plan": "Plan Premium",
+        "PlanId": 57,
+        "Duración": "1 mes",
+        "Cuotas": 18
+    },
+    "Plan 58 --> 3 meses": {
+        "Plan": "Plan Premium",
+        "PlanId": 58,
+        "Duración": "3 meses",
+        "Cuotas": 18
+    },
+    "Plan 59 --> 6 meses": {
+        "Plan": "Plan Premium",
+        "PlanId": 59,
+        "Duración": "6 meses",
+        "Cuotas": 18
+    },
+    "Plan 60 --> 12 meses": {
+        "Plan": "Plan Premium",
+        "PlanId": 60,
+        "Duración": "12 meses",
+        "Cuotas": 18
+    },
+    "Plan 61 --> 1 mes": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 61,
+        "Duración": "1 mes",
+        "Cuotas": 24
+    },
+    "Plan 62 --> 3 meses": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 62,
+        "Duración": "3 meses",
+        "Cuotas": 24
+    },
+    "Plan 63 --> 6 meses": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 63,
+        "Duración": "6 meses",
+        "Cuotas": 24
+    },
+    "Plan 64 --> 12 meses": {
+        "Plan": "Plan Focalizado",
+        "PlanId": 64,
+        "Duración": "12 meses",
+        "Cuotas": 24
+    },
+    "Plan 65 --> 1 mes": {
+        "Plan": "Plan Integral",
+        "PlanId": 65,
+        "Duración": "1 mes",
+        "Cuotas": 24
+    },
+    "Plan 66 --> 3 meses": {
+        "Plan": "Plan Integral",
+        "PlanId": 66,
+        "Duración": "3 meses",
+        "Cuotas": 24
+    },
+    "Plan 67 --> 6 meses": {
+        "Plan": "Plan Integral",
+        "PlanId": 67,
+        "Duración": "6 meses",
+        "Cuotas": 24
+    },
+    "Plan 68 --> 12 meses": {
+        "Plan": "Plan Integral",
+        "PlanId": 68,
+        "Duración": "12 meses",
+        "Cuotas": 24
+    },
+    "Plan 69 --> 1 mes": {
+        "Plan": "Plan Premium",
+        "PlanId": 69,
+        "Duración": "1 mes",
+        "Cuotas": 24
+    },
+    "Plan 70 --> 3 meses": {
+        "Plan": "Plan Premium",
+        "PlanId": 70,
+        "Duración": "3 meses",
+        "Cuotas": 24
+    },
+    "Plan 71 --> 6 meses": {
+        "Plan": "Plan Premium",
+        "PlanId": 71,
+        "Duración": "6 meses",
+        "Cuotas": 24
+    },
+    "Plan 72 --> 12 meses": {
+        "Plan": "Plan Premium",
+        "PlanId": 72,
+        "Duración": "12 meses",
+        "Cuotas": 24
+    },
+    "Plan 73 --> 1 mes": {
+        "Plan": "Plan PAES",
+        "PlanId": 73,
+        "Duración": "1 mes",
+        "Cuotas": 1
+    },
+    "Plan 74 --> 3 meses": {
+        "Plan": "Plan PAES",
+        "PlanId": 74,
+        "Duración": "3 meses",
+        "Cuotas": 1
+    },
+    "Plan 75 --> 6 meses": {
+        "Plan": "Plan PAES",
+        "PlanId": 75,
+        "Duración": "6 meses",
+        "Cuotas": 1
+    },
+    "Plan 76 --> 12 meses": {
+        "Plan": "Plan PAES",
+        "PlanId": 76,
+        "Duración": "12 meses",
+        "Cuotas": 1
+    },
+    "Plan 77 --> 1 mes": {
+        "Plan": "Plan PAES",
+        "PlanId": 77,
+        "Duración": "1 mes",
+        "Cuotas": 3
+    },
+    "Plan 78 --> 3 meses": {
+        "Plan": "Plan PAES",
+        "PlanId": 78,
+        "Duración": "3 meses",
+        "Cuotas": 3
+    },
+    "Plan 79 --> 6 meses": {
+        "Plan": "Plan PAES",
+        "PlanId": 79,
+        "Duración": "6 meses",
+        "Cuotas": 3
+    },
+    "Plan 80 --> 12 meses": {
+        "Plan": "Plan PAES",
+        "PlanId": 80,
+        "Duración": "12 meses",
+        "Cuotas": 3
+    },
+    "Plan 81 --> 1 mes": {
+        "Plan": "Plan PAES",
+        "PlanId": 81,
+        "Duración": "1 mes",
+        "Cuotas": 6
+    },
+    "Plan 82 --> 3 meses": {
+        "Plan": "Plan PAES",
+        "PlanId": 82,
+        "Duración": "3 meses",
+        "Cuotas": 6
+    },
+    "Plan 83 --> 6 meses": {
+        "Plan": "Plan PAES",
+        "PlanId": 83,
+        "Duración": "6 meses",
+        "Cuotas": 6
+    },
+    "Plan 84 --> 12 meses": {
+        "Plan": "Plan PAES",
+        "PlanId": 84,
+        "Duración": "12 meses",
+        "Cuotas": 6
+    },
+    "Plan 85 --> 1 mes": {
+        "Plan": "Plan PAES",
+        "PlanId": 85,
+        "Duración": "1 mes",
+        "Cuotas": 12
+    },
+    "Plan 86 --> 3 meses": {
+        "Plan": "Plan PAES",
+        "PlanId": 86,
+        "Duración": "3 meses",
+        "Cuotas": 12
+    },
+    "Plan 87 --> 6 meses": {
+        "Plan": "Plan PAES",
+        "PlanId": 87,
+        "Duración": "6 meses",
+        "Cuotas": 12
+    },
+    "Plan 88 --> 12 meses": {
+        "Plan": "Plan PAES",
+        "PlanId": 88,
+        "Duración": "12 meses",
+        "Cuotas": 12
+    },
+    "Plan 89 --> 1 mes": {
+        "Plan": "Plan PAES",
+        "PlanId": 89,
+        "Duración": "1 mes",
+        "Cuotas": 18
+    },
+    "Plan 90 --> 3 meses": {
+        "Plan": "Plan PAES",
+        "PlanId": 90,
+        "Duración": "3 meses",
+        "Cuotas": 18
+    },
+    "Plan 91 --> 6 meses": {
+        "Plan": "Plan PAES",
+        "PlanId": 91,
+        "Duración": "6 meses",
+        "Cuotas": 18
+    },
+    "Plan 92 --> 12 meses": {
+        "Plan": "Plan PAES",
+        "PlanId": 92,
+        "Duración": "12 meses",
+        "Cuotas": 18
+    },
+    "Plan 93 --> 1 mes": {
+        "Plan": "Plan PAES",
+        "PlanId": 93,
+        "Duración": "1 mes",
+        "Cuotas": 24
+    },
+    "Plan 94 --> 3 meses": {
+        "Plan": "Plan PAES",
+        "PlanId": 94,
+        "Duración": "3 meses",
+        "Cuotas": 24
+    },
+    "Plan 95 --> 6 meses": {
+        "Plan": "Plan PAES",
+        "PlanId": 95,
+        "Duración": "6 meses",
+        "Cuotas": 24
+    },
+    "Plan 96 --> 12 meses": {
+        "Plan": "Plan PAES",
+        "PlanId": 96,
+        "Duración": "12 meses",
+        "Cuotas": 24
+    }
+}
