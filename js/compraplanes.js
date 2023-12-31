@@ -109,4 +109,4 @@ const tablaPagosTd = document.getElementsByTagName("td")
 
 tablaPagosTd.style.border = "1px solid black"
 tablaPagosTd.style.padding = "1rem"
-tablaPagosTd.style.display = "flex"
+tablaPagosTd.style.display = "flex" 
