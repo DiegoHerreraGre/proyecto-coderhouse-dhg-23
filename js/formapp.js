@@ -1,70 +1,68 @@
 class User {
-    name;
-    lastname;
-    email;
-    comment;
-    region;
+    name
+    lastname
+    email
+    comment
+    region
     constructor(name, lastname, email, comment, region) {
-        this.name = name;
-        this.lastname = lastname;
-        this.email = email;
-        this.comment = comment;
-        this.region = region;
+        this.name = name
+        this.lastname = lastname
+        this.email = email
+        this.comment = comment
+        this.region = region
     }
 }
 
-let dataUser = [];
-document.querySelector(".btn-send-reset").addEventListener(
-    "click", (e) => {
-    e.preventDefault();
-    agregarDatos();
-});
+let dataUser = []
 
 function agregarDatos() {
-    let nombre = document.querySelector("#name").value;
-    let apellido = document.querySelector("#lastname").value;
-    let email = document.querySelector("#email").value;
-    let comentario = document.querySelector("#comment").value;
-    let region = document.querySelector("#region").value;
+    return new Promise((resolve, reject) => {
+        let nombre = document.querySelector("#name").value
+        let apellido = document.querySelector("#lastname").value
+        let email = document.querySelector("#email").value
+        let comentario = document.querySelector("#comment").value
+        let region = document.querySelector("#region").value
 
-    let userFormData = new User(nombre, apellido, email, comentario, region);
-    dataUser.push(userFormData);
+        let userFormData = new User(nombre, apellido, email, comentario, region)
+        dataUser.push(userFormData)
 
-    guardarLocal ("dataUser", JSON.stringify(dataUser));
+        guardarLocal ("dataUser", JSON.stringify(dataUser))
 
-    borrarDatos();
+        borrarDatos()
+
+        resolve(dataUser)
+    })
 }
 
-console.log(dataUser);
+document.querySelector(".btn-send-reset").addEventListener("click", (e) => {
+    e.preventDefault()
+    agregarDatos().then(dataUser => {
+        console.log(dataUser)
+    }).catch(err => {
+        console.error(err)
+    })
+})
 
 function borrarDatos() {
-    document.querySelector("#name").value = "";
-    document.querySelector("#lastname").value = "";
-    document.querySelector("#email").value = "";
-    document.querySelector("#region").value = "";
-    document.querySelector("#comment").value = "";
+    document.querySelector("#name").value = ""
+    document.querySelector("#lastname").value = ""
+    document.querySelector("#email").value = ""
+    document.querySelector("#region").value = ""
+    document.querySelector("#comment").value = ""
 }
-
-let filtrarRegion = document.querySelector("#region");
-
-filtrarRegion.addEventListener("change", (e) => {
-    let region = e.target.value;
-    const filtroRegion = dataUser.filter((user) => user.region === region);
-    console.log(filtroRegion);
-});
 
 const guardarLocal = (dato, valor) => {
-    localStorage.setItem(dato, valor);
+    localStorage.setItem(dato, valor)
 }
 
-const varStorage = JSON.parse(localStorage.getItem("dataUser"));
-const auxVar = [];
+const varStorage = JSON.parse(localStorage.getItem("dataUser"))
+const auxVar = []
 
 for (const i of varStorage) {
-    auxVar.push(new User(i.name, i.lastname, i.email, i.comment, i.region));
-};
+    auxVar.push(new User(i.name, i.lastname, i.email, i.comment, i.region))
+}
 
-console.log(varStorage);
+console.log(varStorage)
 
 const form = document.querySelector("form")
 
@@ -72,29 +70,31 @@ form.addEventListener("submit", (event) => {
     event.preventDefault()
 
     const formData = new FormData(form)
-    const data = Object.fromEntries(formData)
+    Object.fromEntries(formData)
+})
 
-    fetch("http://localhost:8080", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
-});
+console.log(dataUser)
 
 borrarDatos()
 
-module.exports = userFormData
-module.exports = user
-module.exports = dataUser
-module.exports = agregarDatos
-module.exports = borrarDatos
-module.exports = filtrarRegion
-module.exports = guardarLocal
-module.exports = varStorage
-module.exports = auxVar
-module.exports = form
+const sendJson = dataUser => {
+    return fetch("http://127.0.0.1:5500/users.json", {
+        method: "POST",
+        body: JSON.stringify(dataUser),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(res => res.json())
+}
+
+agregarDatos().then(dataUser => {
+    console.log(dataUser)
+    sendJson(dataUser).then(response => {
+        console.log(response)
+    }).catch(err => {
+        console.error(err)
+    })
+}).catch(err => {
+    console.error(err)
+})

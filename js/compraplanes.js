@@ -93,6 +93,11 @@ function calcularPrecio(a, b, c) {
     </table>`
 }
 
+compraCompleta = fetch ("http://localhost:8080/planes.json")
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error))
+
 compraCompleta.style.width = "50%"
 compraCompleta.style.margin = "auto"
 compraCompleta.style.border = "1px solid black"
@@ -110,3 +115,4 @@ const tablaPagosTd = document.getElementsByTagName("td")
 tablaPagosTd.style.border = "1px solid black"
 tablaPagosTd.style.padding = "1rem"
 tablaPagosTd.style.display = "flex" 
+
