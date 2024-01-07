@@ -7,7 +7,7 @@ const fetch = require("node-fetch")
 
 const app = express()
 
-const wss = new WebSocket.Server({ port: 5501 });
+const wss = new WebSocket.Server({ port: 3000 });
 
 wss.on('connection', ws => {
     ws.on('message', message => {
@@ -33,7 +33,7 @@ app.post('/users.json', (req, res) => {
     })
 })
 
-app.listen(5500, () => console.log('Servidor escuchando en el puerto 5500'))
+app.listen(3000, () => console.log('Servidor escuchando en el puerto 5500'))
 
 fetch("http://127.0.0.1:5500/pages/contact.html")
     .then((res) => res.text())

@@ -62,7 +62,7 @@ for (const i of varStorage) {
     auxVar.push(new User(i.name, i.lastname, i.email, i.comment, i.region))
 }
 
-console.log(varStorage)
+console.log(auxVar)
 
 const form = document.querySelector("form")
 
