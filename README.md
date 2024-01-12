@@ -65,3 +65,11 @@ VERSIÓN 1.2.0 --> JS EN EL FORMULARIO DE CONTACTO
 4) Se hacen dos funciones para acompañar todas estas expresiones
 5) Se regresa el valor del array con los datos del usuario creado gracias a la clase y el constructor.
 6) Se crea un filtro para que en el array se pueda buscar por región. En este mismo principio se puede conseguir más filtros necesarios por si se quiere manejar una base de datos en un servidor externo.
+
+VERSIÓN 1.5.2   --> API | NODE.JS | PREPARACIÓN PARA MONGODB 
+
+1) Se configura una API que responde con la aplicación POSTMAN a los requerimientos POST de testeo.
+2) Queda pendiente construir el enlace para que el formulario de contacto pueda hacer esto de forma automática. 
+3) Se instalan las dependencias NPM de express(), body-parser(), cors() y morgan() para manejo de errores, 
+creación de middleware, y creación de un localhost:3000. 
+4) Se crea carpeta API con rutas específicas para configurar el formulario de contacto con la app.js y también con el contact.js y contact.html

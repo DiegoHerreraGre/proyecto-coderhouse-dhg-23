@@ -1,43 +1,39 @@
-const express = require("express")
-const bodyParser = require("body-parser")
-const fs = require("fs")
-const WebSocket = require("ws")
-const cors = require("cors")
-const fetch = require("node-fetch")
+const express = require('express');
+const app = express();
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
 
-const app = express()
+const contactRoutes = require('./api/routes/contact');
 
-const wss = new WebSocket.Server({ port: 3000 });
+app.use(morgan('dev'));
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
-wss.on('connection', ws => {
-    ws.on('message', message => {
-        console.log('received: %s', message)
-    })
+app.use((req, res, next) =>{
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-Width, Content-Type, Accept, Authorization');
+    if(req.method === 'OPTIONS'){
+        res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
+        return res.status(200).json({});
+    }
+    next();
+});
 
-    ws.send('something')
-})
+app.use('/contact', contactRoutes);
 
-app.use(cors())
+app.use((req, res, next) => {
+    const error = new Error('Not found');
+    error.status(404);
+    next(error);
+});
 
-app.use(bodyParser.json())
-
-app.post('/users.json', (req, res) => {
-    const dataUser = req.body
-    fs.writeFile('users.json', JSON.stringify(dataUser), (err) => {
-        if (err) {
-            console.error(err)
-            res.status(500).send('Hubo un error al guardar los datos')
-        } else {
-            res.send('Datos guardados con éxito')
+app.use((error, req, res, next) => {
+    res.status(error.status || 500);
+    res.json({
+        error: {
+            message: error.message
         }
-    })
-})
+    });
+});
 
-app.listen(3000, () => console.log('Servidor escuchando en el puerto 5500'))
-
-fetch("http://127.0.0.1:5500/pages/contact.html")
-    .then((res) => res.text())
-    .then((data) => {
-        console.log(data)
-    })
-    .catch((err) => console.log(err))
+module.exports = app; 

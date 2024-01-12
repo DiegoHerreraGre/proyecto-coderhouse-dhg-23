@@ -27,3 +27,11 @@ main#pay article {
     margin: 100px;
     text-shadow: 10px;
 }
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
