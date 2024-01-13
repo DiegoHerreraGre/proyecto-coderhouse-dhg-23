@@ -73,3 +73,10 @@ VERSIÓN 1.5.2   --> API | NODE.JS | PREPARACIÓN PARA MONGODB
 3) Se instalan las dependencias NPM de express(), body-parser(), cors() y morgan() para manejo de errores, 
 creación de middleware, y creación de un localhost:3000. 
 4) Se crea carpeta API con rutas específicas para configurar el formulario de contacto con la app.js y también con el contact.js y contact.html
+
+VERSIÓN 1.5.3 --> API | SE AGREGA MONGODB COMO UN SERVIDOR EXTERNO 
+
+1) Funcionamientos con POSTMAN están correctos. 
+2) Es necesario actualizar la forma en que la información sea recibida por Mongo DB. 
+3) Creación de la carpeta routes en conjunto con actualización del server.js
+

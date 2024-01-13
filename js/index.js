@@ -1,18 +1,3 @@
-import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, addDoc } from 'firebase/firestore/lite';
-
-const firebaseConfig = {
-    apiKey: "AIzaSyDpD3S5xdZfiYZtHAQxvwR5ueyu4yd2C4A",
-    authDomain: "data-base-dhg.firebaseapp.com",
-    projectId: "data-base-dhg",
-    storageBucket: "data-base-dhg.appspot.com",
-    messagingSenderId: "220588715788",
-    appId: "1:220588715788:web:dad9d481bddf9e5f2aa329",
-    measurementId: "G-6TCYSMH4HS"
-};
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
 class User {
     name;
     lastname;
@@ -27,13 +12,16 @@ class User {
         this.region = region;
     }
 }
+
 let dataUser = [];
 
 document.querySelector(".btn-send-reset").addEventListener(
     "click", (e) => {
-    e.preventDefault();
-    agregarDatos();
-});
+        e.preventDefault();
+        agregarDatos();
+        borrarDatos();
+    });
+
 async function agregarDatos() {
     let nombre = document.querySelector("#name").value;
     let apellido = document.querySelector("#lastname").value;
@@ -41,23 +29,14 @@ async function agregarDatos() {
     let comentario = document.querySelector("#comment").value;
     let region = document.querySelector("#region").value;
     let userFormData = new User(nombre, apellido, email, comentario, region);
-    try {
-        const docRef = await addDoc(collection(db, "users"), {
-            name: userFormData.name,
-            lastname: userFormData.lastname,
-            email: userFormData.email,
-            comment: userFormData.comment,
-            region: userFormData.region,
-        });
-
-        console.log("Document written with ID: ", docRef.id);
-    } catch (e) {
-        console.error("Error adding document: ", e);
-    }
-
+    if (nombre === "" || apellido === "" || email === "" || comentario === "" || region === "") {
+        alert("Por favor, rellene todos los campos");
+    return false;
+    } else {
     dataUser.push(userFormData);
-    guardarLocal ("dataUser", JSON.stringify(dataUser));
-    return dataUser;
+    guardarLocal("dataUser", JSON.stringify(dataUser));
+    return true;
+    }
 }
 
 function borrarDatos() {
@@ -68,39 +47,51 @@ function borrarDatos() {
     document.querySelector("#region").value = "";
     document.querySelector("#comment").value = "";
 }
+
 let filtrarRegion = document.querySelector("#region");
 filtrarRegion.addEventListener("change", (e) => {
     let region = e.target.value;
     const filtroRegion = dataUser.filter((user) => user.region === region);
     console.log(filtroRegion);
 });
+
 const guardarLocal = (dato, valor) => {
     localStorage.setItem(dato, valor);
 }
-const varStorage = JSON.parse(localStorage.getItem("dataUser"));
+const varStorage = localStorage.getItem("dataUser") ? JSON.parse(localStorage.getItem("dataUser")) : [];
 const auxVar = [];
 for (const i of varStorage) {
     auxVar.push(new User(i.name, i.lastname, i.email, i.comment, i.region));
 };
-console.log(varStorage);
+
+dataUser.push(...auxVar);
+
 const form = document.querySelector("form")
+
 form.addEventListener("submit", (event) => {
     event.preventDefault()
     const formData = new FormData(form)
     const data = Object.fromEntries(formData)
-    fetch("http://localhost:8080", {
+    fetch("http://localhost:3000", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(data)
     })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
 });
 
 console.log(dataUser);
+
+if (guardarLocal() === true) {
+    console.log("Datos guardados");
+    alert("Enviado correctamente");
+} else {
+    console.error("No hay datos guardados");
+}
 
 borrarDatos();
 
@@ -117,7 +108,7 @@ class Cotizador {
         this.cuota = cuota;
     }
 
-    calcularPrecio () {
+    calcularPrecio() {
         return (this.plan = (this.precio / this.cuota))
     }
 }
@@ -128,7 +119,7 @@ if (hear === hear.addEventListener("mouseover", calcularPrecio)) {
 }
 
 
-async function calcularPrecio () {
+async function calcularPrecio() {
     const plan = document.getElementById("menu__drop").value
     const precio = document.getElementById("value__of__money").value
     const cuota = document.getElementById("cuotas").value
@@ -193,7 +184,7 @@ function calcularPrecio(a, b, c) {
     } else if (duracionSeleccionada === "2 años") {
         tiempoCuotas = planes[6]
     }
-    
+
     if (seleccionCuota === "0") {
         numeroCuota = cuotas[0]
     } else if (seleccionCuota === "3") {
@@ -238,7 +229,7 @@ function calcularPrecio(a, b, c) {
     </table>`
 }
 
-compraCompleta = fetch ("http://localhost:8080/planes.json")
+compraCompleta = fetch("http://localhost:8080/planes.json")
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error(error))
@@ -259,18 +250,18 @@ const tablaPagosTd = document.getElementsByTagName("td")
 
 tablaPagosTd.style.border = "1px solid black"
 tablaPagosTd.style.padding = "1rem"
-tablaPagosTd.style.display = "flex" 
+tablaPagosTd.style.display = "flex"
 
 // Pondré algunas decoraciones por acá
 
 let cardTitles = document.getElementsByClassName('card-title');
 
-for (let i = 0; i < cardTitles.length; i++)  {
-    cardTitles[i].addEventListener("mouseover",function(e) {
+for (let i = 0; i < cardTitles.length; i++) {
+    cardTitles[i].addEventListener("mouseover", function (e) {
         e.target.style.color = "red";
     });
 
-    cardTitles[i].addEventListener("mouseout",function(e) {
+    cardTitles[i].addEventListener("mouseout", function (e) {
         e.target.style.color = "black";
     });
 };
@@ -280,8 +271,7 @@ let containerMouse2 = document.getElementsByClassName("card-desc-2")[1];
 let containerMouse3 = document.getElementsByClassName("card-desc-3")[2];
 let containerMouse4 = document.getElementsByClassName("card-desc-4")[3];
 
-if (containerMouse1 = containerMouse1.addEventListener("click",function(e) {
+if (containerMouse1 = containerMouse1.addEventListener("click", function (e) {
     e.preventDefault();
     e.target.innerHTML = "You clicked me!";
 }));
-
